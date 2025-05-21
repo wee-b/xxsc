@@ -1,10 +1,16 @@
 <script setup>
-
+import LayoutNav from "@/views/Layout/components/LayoutNav.vue";
+import LayoutHeader from "@/views/Layout/components/LayoutHeader.vue";
+import LayoutFooter from "@/views/Layout/components/LayoutFooter.vue";
+import LayoutFixed from "@/views/layout/components/LayoutFixed.vue";
 </script>
 
 <template>
-  我是首页页面布局
-  <router-view/>
+  <LayoutFixed></LayoutFixed>
+  <LayoutNav></LayoutNav>
+  <LayoutHeader></LayoutHeader>
+  <RouterView/>
+  <LayoutFooter></LayoutFooter>
 </template>
 
 <style scoped>

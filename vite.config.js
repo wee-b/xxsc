@@ -16,6 +16,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
     AutoImport({
+      imports:["vue","vue-router",'pinia'],  // 在js文件中自动导入
       resolvers: [ElementPlusResolver()],
     }),
     Components({
