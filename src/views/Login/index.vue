@@ -97,6 +97,10 @@ const doLogin = () => {
                 </el-checkbox>
               </el-form-item>
               <el-button size="large" class="subBtn" @click="doLogin">点击登录</el-button>
+
+              <div class="login-link">
+                没有账号？<router-link to="/register">立即注册</router-link>
+              </div>
             </el-form>
           </div>
 
@@ -122,6 +126,21 @@ const doLogin = () => {
 </template>
 
 <style scoped lang='scss'>
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #666;
+
+  a {
+    color: #2e7d32; // 深绿色
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
 .login-header {
   background: #fff;
   border-bottom: 1px solid #e4e4e4;
