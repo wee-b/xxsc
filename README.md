@@ -17,6 +17,7 @@ npm install
 npm install element-plus --save
 npm init vue@latest
 npm i sass -D
+npm i pinia-plugin-persistedstate
 
 ```
 

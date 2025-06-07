@@ -1,4 +1,6 @@
 import { loginAPI } from '@/apis/user'
+import {useCartStore} from "@/stores/cartStore.js";
+
 export const useUserStore = defineStore(
     'user',
     () => {
@@ -9,8 +11,10 @@ export const useUserStore = defineStore(
         const res = await loginAPI(user)
         userInfo.value = res.result
     }
+    const cartStore = useCartStore();
     const clearUserInfo = () => {
         userInfo.value = {}
+        cartStore.clearCart()
     }
     // 3. 以对象的格式把state和action return
     return {
