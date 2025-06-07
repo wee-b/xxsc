@@ -26,7 +26,7 @@ onMounted( ()=> getGoods() )
           <li v-for="good in cate.goods" :key="good.id">
             <RouterLink to="/" class="goods-item">
               <!-- 懒加载 -->
-              <img v-img-lazy="cate.picture" />
+              <img v-img-lazy="good.picture" />
               <p class="name ellipsis">{{ good.name }}</p>
               <p class="desc ellipsis">{{ good.desc }}</p>
               <p class="price">&yen;{{ good.price }}</p>
